@@ -1,23 +1,41 @@
-Overview
-This is a simple REST API built with Node.js and Express.js, deployed on an AWS EC2 instance. It serves static JSON data for students and subjects.
+# Deployment-project
 
-Tech Stack
-Backend: Node.js, Express.js
+## Project Overview
 
-Hosting: AWS EC2
+This project involves developing a simple API using a preferred programming language and a relational database management system (RDBMS). The API is deployed on an AWS EC2 instance and provides endpoints for student information retrieval.
 
-Package Manager: npm
-Installation & Setup
-1️⃣ Clone the repository
-git clone https://github.com/Felister3359/Deployment-project.git
-cd Deployment-project
-2️⃣ Install dependencies
-npm install
-3️⃣ Start the server
-npm start
+## Features
 
-or
+- **Endpoint 1: `/students`**
 
-bash
+  - Returns a JSON response containing a minimum of 10 students.
+  - Each student includes their **name** and **enrolled program**.
 
-node index.js
+- **Endpoint 2: `/students`**
+  - Returns JSON data for a specific student identified by their **ID**.
+  - Data includes **name**, **enrolled program**, and **scores** for each subject.
+
+## Technologies Used
+
+- **Backend:** (Express Node.js)
+- **Version Control:** Git, GitHub
+- **Deployment:** AWS EC2, Nginx/Apache
+
+## Setup & Installation
+
+1. **Clone the repository:**
+   git clone https://github.com/Felister3359/Deployment-project.git
+   cd EC2-API-PROJECT
+
+2. Install dependencies (if applicable):
+   npm install # For Node.js projects
+
+3. run the project
+   locally: node index.js
+   live: endpoint1(http://13.60.210.54:5000/subjects) && endpoint2(http://13.60.210.54:5000/students)
+
+## Understand Backup Schemes
+
+- Full Backup: Backs up the entire system. Easy to restore. Takes more space and time.
+- Incremental Backup: Only backs up what changed since the last backup. Saves space. Slower restore.
+- Differential Backup: Backs up everything changed since last full backup. Faster restore. Medium space.
